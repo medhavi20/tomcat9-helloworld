@@ -1,17 +1,17 @@
 app:
   name: Tomcat Loadgen
   code: TCLG
-  notify: srswain@ecloudcontrol.com
+  notify: mmehrotra@ecloudcontrol.com
 
 build:
   version: 0.3
-  env: PROD
+  env: DEV
   build_file: pom.xml
   output_files: output/*.war
   image_template: tomcat9
 
 deploy:
-  context: cloudorbit/PROD
+  context: medhavi20/DEV
   replicas: 1
   session_affinity: ClientIP
   port: 
@@ -26,4 +26,4 @@ properties:
   next: 15
   download: false
   random : true
-  nano : 106
+  nano : 108
